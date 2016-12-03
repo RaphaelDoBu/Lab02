@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html ng-app="app" >
+<head>
+	<meta charset="UTF-8"/>
+	<title>Agenda de tarefas</title>
+
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700' rel='stylesheet' type='text/css'>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+	<script type="text/javascript" src="js/listaDeTarefas.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/estilo.css">
+</head>
+
+<body >
+	<div class="header">
+		<header>
+			<div class="top">
+				<h1 class="logo">To do list</h1>
+			</div>
+		</header>	
+	</div>
+
+	<div  class="bodyTarefas" ng-controller="listaDeTarefas">
+		<div class="tarefas-progresso">
+			<div class="colTarefasParaCumprir">
+				<h3> Tarefas a cumprir: {{listaDeTarefasParaCumprir.length}}</h3>
+				<div>
+			     <input class="form-control" type="text" placeholder="Adicione uma tarefa..." ng-model="tarefa" />
+			        <button type="button" class="btn btn-default" aria-label="Left Align" ng-click="addTarefa()" ng-disabled>
+	  					<span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+					</button>
+					</div>	
+				<div class="tarefasParaCumprir" >
+					<ul>
+				        <li ng-repeat="lista in listaDeTarefasParaCumprir">
+				        	<input type="checkbox" ng-click="marcarTarefa($index)"/>
+				             {{lista}}
+				            <span class="botaoX" ng-click="removeTarefaCumprida($index)">&times;</span>
+
+				        </li>
+				    </ul>
+
+				</div>
+				<div>
+					<button class="excluirListaParaCumprir" ng-click="limparListaParaCumprir()"><p>Limpar Lista</p></button>
+				</div>
+			</div>
+
+			<div class="colTarefasCompletas">
+				<h3>Total de tarefas completas: {{listaDeTarefasCompletas.length}} </h3>
+				<div class="container">
+					<div class="progress">
+					    <div class="progress-bar" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:{{(listaDeTarefasCompletas.length / progresso)*100}}%">
+					     	<p>{{((listaDeTarefasCompletas.length / progresso)*100)}}%</p>
+					    </div>
+					</div>
+				</div>
+
+				<div class="tarefasCompletas">
+					<ul>
+			            <li ng-repeat="lista in listaDeTarefasCompletas">
+			            	<span class="glyphicon glyphicon-ok" aria-hidden="true"></span>{{lista}} 
+			            	<span class="botaoX" ng-click="removeTarefaCompleta($index)">
+			            		&times;</span>
+			            </li>
+			         </ul>
+		       	</div>
+				
+				<div>
+					<button class="excluirListaTarefaCompleta" ng-click="limparListaCompleta()"><p>Limpar Lista</p></button>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>

@@ -1,0 +1,178 @@
+/*topo do site*/
+.top{
+	width: 960px;
+	margin: 0 auto;
+	overflow: auto;
+}
+
+.header{
+	background: #898989;
+}
+
+.logo{
+	text-align: center;
+}
+
+/* corpo do site*/
+
+body{
+	margin: 0 auto;
+	font-family: 'Roboto', sans-serif;
+	color: #333;
+}
+
+.colTarefasParaCumprir h3{
+	text-align: center;
+}
+
+.colTarefasCompletas h3{
+	margin-left: 60px;
+}
+
+.bodyTarefas{
+	background: #C2C2C2;
+}
+
+.form-control{
+	margin-top: 10px;
+	width: 335px;
+	margin-right: 0;
+	float: left;
+}
+
+.btn-default{
+	float: right;
+	margin-top: 10px;
+}
+
+.tarefas-progresso{
+	width: 990px;
+	min-height: 500px;
+	margin: 0 auto;
+	overflow: auto;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+.colTarefasParaCumprir{
+	width:400px;
+	min-height:400px;
+	float:left;
+	padding: 0 10px;
+	overflow: auto;
+	
+}
+
+.tarefasParaCumprir{
+	width: 380px;
+	min-height: 250px;
+	float:left;
+	overflow: auto;
+	margin-top: 50px;
+}
+
+.tarefasParaCumprir ul li, .tarefasCompletas ul li{
+	font-weight: 500;
+	font-size: 17px;
+}
+
+.glyphicon-ok{
+	margin-right: 10px;
+}
+
+.colTarefasCompletas{
+	width:530px;
+	min-height:400px;
+	float:right;
+	padding: 0 10px;
+	overflow: auto;
+
+}
+
+.tarefasCompletas{
+	width: 520px;
+	min-height: 255px;
+	float: right;
+	overflow: auto;
+	margin-top: 40px;
+}
+
+.botaoAdd{
+	width: 380px;
+	margin-top: 2px;
+}
+
+span.botaoX{
+	cursor: pointer;
+	margin-left: 15px;
+}
+
+.excluirListaParaCumprir{
+	width: 380px;
+	margin-top: 30px;
+}
+
+.excluirListaTarefaCompleta{
+	width: 390px;
+	margin-top: 30px;
+	margin-left: 30px;
+}
+
+.colTarefasParaCumprir ul{
+	padding-left: 20px;
+}
+
+ul li{
+	list-style: none;
+	display: block;
+	padding-bottom: 5px;
+}
+
+.colTarefasCompletas ul{
+	padding-left: 50px;
+}
+
+
+.progress{
+	width: 400px;
+	margin-left: 10px;
+	margin-top: 10px;
+}
+
+.progress-bar p{
+	text-align: center;
+}
+
+.container{
+	width: 500px;
+}
+
+button{
+	border:none;
+	border-radius: 5px;
+	color: 
+}
+
+button p{
+	margin-top: 3px;
+	margin-bottom: 3px;
+	font-size: 15px;
+	font-weight: 500;
+}
+
+button:hover {
+	background: #497FBF;
+	border-radius: none;
+}
+
+button.excluirListaTarefaCompleta:hover{
+	text-decoration: none;
+}
+
+button:focus{
+	outline: 0;
+}
+
+.tarefasCompletas ul li{
+	color: #497FBF;
+}
