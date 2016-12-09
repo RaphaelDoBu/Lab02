@@ -5,12 +5,54 @@
 	overflow: auto;
 }
 
+.menu-nav{
+	width: 960px;
+	margin: 0 auto;
+	overflow: auto;
+}
+
+.menu-nav ul li{
+	float: right;
+	margin-right: 15px;
+	margin-top: 10px;
+	font-weight: 400;
+	font-size: 17px;
+	list-style: none;
+	text-decoration: none;
+}
+
+.menu-nav li a{
+	padding: 5px 5px;
+	border-radius: 5px;
+	background: #1f3c58;
+	color: #ebebeb;
+}
+
+.menu-nav ul li a{
+	padding-right: 10px;
+}
+
+.menu-nav li a:hover, .menu-nav a:link{
+	background: #315e8a;
+	text-decoration: none;
+	color: #ebebeb;
+	list-style: none;
+}
+
+/*.menu-nav li a:link{
+	text-decoration: none;
+}
+*/
 .header{
-	background: #898989;
+	background: #00AEED;
 }
 
 .logo{
 	text-align: center;
+}
+
+.top h1{
+	color: #ebebeb;
 }
 
 /* corpo do site*/
@@ -30,7 +72,7 @@ body{
 }
 
 .bodyTarefas{
-	background: #C2C2C2;
+	background: #A5D8F6;
 }
 
 .form-control{
@@ -150,7 +192,7 @@ ul li{
 button{
 	border:none;
 	border-radius: 5px;
-	color: 
+	background: #1f3c58;
 }
 
 button p{
@@ -158,10 +200,11 @@ button p{
 	margin-bottom: 3px;
 	font-size: 15px;
 	font-weight: 500;
+	color: #ebebeb;
 }
 
 button:hover {
-	background: #497FBF;
+	background: #315e8a;
 	border-radius: none;
 }
 
@@ -174,5 +217,5 @@ button:focus{
 }
 
 .tarefasCompletas ul li{
-	color: #497FBF;
+	color: #00AD63;
 }
